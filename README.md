@@ -115,4 +115,3 @@ Para más información o preguntas sobre el proyecto, puedes contactarme en:
 
 - Nombre: David Blanco Martínez
 - Correo: davidblanco2705@gmail.com
-- Github: 
