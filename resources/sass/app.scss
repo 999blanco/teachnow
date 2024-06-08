@@ -1,0 +1,1270 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap Variables
+$form-select-indicator-color: #fff;
+$form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#cacaca'/></svg>");
+
+/* $accordion-icon-color: #fff;
+$accordion-icon-active-color: #fff; */
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// General Variables
+$background-primary: #ececec;
+$background-secondary: #dbdbdb;
+
+$text-primary: #0078b9;
+$text-secondary: #004a72;
+$text-light: #a0a0a0;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: $background-primary;
+}
+
+// Disabled attribute has the pointer-events set to the disabled one
+[disabled] {
+    pointer-events: visible !important;
+    cursor: not-allowed!important;
+}
+
+// Color Classes
+.text-primary {
+    color: $text-primary !important;
+}
+
+.text-secondary {
+    color: $text-secondary !important;
+}
+
+.text-light {
+    color: $text-light !important;
+}
+
+// General Classes
+.bg-success{
+    background-color: #a8ddb4 !important;
+}
+
+.toast-container{
+    position: fixed;
+    top: 7.5rem;
+    right: 15rem;
+    z-index: 9999;
+}
+
+.toast-header{
+    background-color: $background-secondary;
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.toast-body{
+    font-weight: 700; 
+    background-color: $background-primary;
+    color: $text-light;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+// Pagination
+ul.pagination{
+    margin-bottom: 0;
+}
+.light-pagination .page-item .page-link{
+    background-color: $background-primary!important;
+    border: 1.5px solid $background-secondary;
+    color: #cacaca;
+}
+.dark-pagination .page-item .page-link{
+    background-color: $background-secondary!important;
+    border: 1.5px solid $background-primary;
+    color: #676767;
+}
+.light-pagination .page-item.active .page-link{
+    border-color: $background-secondary;
+}
+.dark-pagination .page-item.active .page-link{
+    border-color: $background-primary;
+
+}
+.page-item .page-link{
+    color: #fff;
+    box-shadow: none;
+}
+.page-item.active .page-link{
+    color: $text-primary;
+}
+.page-item.active::after{
+    height: 0px!important;
+    background-color: transparent;
+}
+.page-item.disabled .page-link{
+    color: #5e5e5e;
+}
+
+// Containers
+.container-custom {
+    padding: 0 15rem;
+}
+
+.container-custom-small {
+    padding: 0 14rem;
+}
+
+@media (max-width: 1700px) {
+    .container-custom {
+        padding: 0 6rem;
+    }
+
+    .container-custom-small {
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .container-custom {
+        padding: 0 2rem;
+    }
+
+    .container-custom-small {
+        padding: 0 2rem;
+    }
+}
+
+
+// Utility Classes
+// Spinner
+@keyframes fa-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-spinner {
+    -webkit-animation: 5s linear infinite fa-spinner;
+    animation: 5s linear infinite fa-spinner;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222222;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0078b9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #004a72;
+}
+
+// Buttons
+.btn {
+    padding: .75rem 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 1rem;
+    box-shadow: none !important;
+}
+
+.btn-small {
+    padding: .5rem .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 1rem;
+    box-shadow: none !important;
+}
+
+.btn-link {
+    color: $text-light;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.btn-link:hover {
+    color: #767676;
+}
+
+.btn-input-group {
+    padding: .4rem 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid $text-light!important;
+    border-radius: 5px;
+    font-size: .9rem;
+    box-shadow: none !important;
+}
+
+.btn-primary {
+    background: -webkit-linear-gradient($text-primary, $text-secondary);
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:disabled {
+    background: -webkit-linear-gradient(#00679e, #003857);
+    color: #fff;
+    border: 0;
+}
+
+.btn-secondary {
+    background: -webkit-linear-gradient(#9e9e9e, #4f4f4f);
+    color: #fff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:disabled {
+    background: -webkit-linear-gradient(#6c6c6c, #303030);
+    color: #fff;
+    border: 0;
+}
+
+.btn-dropdown {
+    font-weight: 400;
+    padding: .5rem .75rem;
+    background-color: $background-primary !important;
+    color: #000;
+    text-align: left;
+    text-transform: none;
+    font-size: .9rem;
+    display: block;
+    width: 100%;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    line-height: 1.6;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border: 1px solid $text-light !important;
+}
+
+.btn-dropdown.dark{
+    background-color: $background-secondary !important;
+}
+
+.btn-dropdown.dropdown-toggle::after {
+    display: none !important;
+}
+
+.btn-select-image{
+    padding: 2.55rem;
+    background-color: $background-primary;
+    border: 1px dashed #000;
+    font-weight: 400;
+}
+.btn-select-image:hover{
+    background-color: $background-primary;
+    border: 1px dashed #000;
+}
+
+.btn-close {
+    box-shadow: none !important;
+}
+
+// Forms
+.form-label {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.form-control {
+    padding: .5rem .75rem;
+    background-color: $background-primary;
+    color: #000000 !important;
+    border: 1px solid $text-light;
+}
+.form-control.dark {
+    background-color: $background-secondary;
+}
+.form-control.light {
+    background-color: #fff;
+}
+.border-left-none {
+    border-left: none !important;
+}
+
+.form-control::placeholder {
+    color: $text-light;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    background-color: $background-primary;
+    border: 1px solid $text-light;
+}
+.form-control:disabled {
+    background-color: $background-primary;
+}
+
+.form-control.dark:focus {
+    background-color: $background-secondary;
+}
+
+.form-control.dark:disabled {
+    background-color: $background-secondary;
+}
+.form-control.light:focus {
+    background-color: white;
+}
+
+.form-control.light:disabled {
+    background-color: rgb(218, 218, 218);
+}
+
+.form-subtitle {
+    text-transform: uppercase;
+    color: $text-light;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.input-group-text {
+    color: $text_primary;
+    font-weight: 700;
+    padding-right: 0;
+    background-color: $background-primary;
+    border: 1px solid $text-light;
+}
+.input-group-text.dark {
+    background-color: $background-secondary;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-input:active,
+.form-check-input:focus,
+.form-check-input:checked {
+    box-shadow: none;
+    border: none;
+}
+
+.form-check-input:checked {
+    background-color: $text-secondary;
+}
+
+.form-check-label {
+    color: $text-light;
+    font-weight: 700;
+}
+
+// Navigation
+.navbar {
+    background-color: $background-secondary;
+    box-shadow: 0px 0px 2px #000;
+    padding: .8rem 14.5rem .65rem 14.5rem;
+}
+
+
+.nav-link {
+    font-size: 1.025rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    color: #000;
+    position: relative;
+}
+
+.nav-link.active {
+    color: $text-primary !important;
+}
+
+.nav-link:hover {
+    color: $text-secondary !important;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    padding: 0;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #000;
+}
+
+.navbar-brand .text {
+    display: inline-block;
+    padding-top: .4rem;
+}
+
+.nav-link:focus,
+.nav-link:active {
+    color: #000;
+}
+
+.navbar-toggler {
+    float: right;
+    border: none;
+    padding-right: 0;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar .navbar-toggler-icon {
+    width: 24px;
+    height: 17px;
+    background-image: none;
+    position: relative;
+    border-bottom: 1px solid #000000;
+    transition: all 300ms linear;
+}
+
+.navbar .navbar-toggler-icon:after,
+.navbar .navbar-toggler-icon:before {
+    width: 24px;
+    position: absolute;
+    height: 1px;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 2;
+    transition: all 300ms linear;
+}
+
+.navbar .navbar-toggler-icon:after {
+    top: 8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    border-color: transparent;
+}
+
+.dropdown-menu {
+    margin-top: .5rem !important;
+    background-color: $background-primary;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.dropdown-menu.dark {
+    background-color: $background-secondary;
+}
+
+.dropdown-divider {
+    background-color: #e8e8e8;
+}
+
+.dropdown-notifications a {
+    text-decoration: none;
+}
+
+.dropdown-notifications a li:hover {
+    background-color: $background-primary;
+}
+
+.dropdown-item {
+    font-size: .95rem;
+    color: #000;
+    font-weight: 700;
+}
+
+.dropdown-item.active::after {
+    display: none !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-image: linear-gradient($text-primary, $text-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: transparent !important;
+}
+
+@media (max-width: 1700px) {
+    .navbar {
+        padding: .75rem 5.5rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    #navbarSupportedContent .noauth {
+        margin-top: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .active::after {
+        display: none !important;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        margin-bottom: 0rem;
+    }
+
+    .home-mt {
+        margin-top: .25rem;
+    }
+
+    .nav-btn {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    .navbar-nav .dropdown-menu {
+        background-color: $background-primary;
+        width: 100%;
+    }
+}
+
+// App Navbar and Sidebar
+// AUTH NAVIGATION AND SIDEBAR
+.navbar.app-navbar {
+    padding: .8rem 1rem .65rem 1rem;
+}
+
+@media (max-width: 1200px) {
+    .navbar.app-navbar .balance {
+        display: none;
+    }
+
+    .navbar.app-navbar {
+        padding: .8rem 0rem .65rem 0rem;
+    }
+
+    .auth {
+        padding-top: 6rem;
+    }
+}
+
+.navbar-nav.app-navbar {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .navbar-nav.app-navbar {
+        display: block;
+    }
+}
+
+.app-navbar .dropdown-menu {
+    background-color: $background-secondary !important;
+    border: 1px solid #1b1b1b;
+}
+
+.app-navbar .navbar-brand {
+    margin-right: 0;
+}
+
+.app-navbar .offcanvas {
+    background-color: $background-secondary !important;
+}
+
+.app-navbar .offcanvas .offcanvas-header {
+    padding-bottom: 0;
+}
+
+.app-navbar .offcanvas .offcanvas-body h5 {
+    color: $text-light;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+.app-navbar .offcanvas .offcanvas-body .navbar-nav li a.nav-link {
+    color: #000;
+    margin-left: .5rem;
+    font-size: .9rem;
+    padding-bottom: .25rem;
+}
+
+.app-navbar .offcanvas .offcanvas-body .navbar-nav li a.disabled {
+    cursor: crosshair;
+}
+
+.app-navbar .offcanvas .offcanvas-body .navbar-nav li a.nav-link:hover {
+    background-image: linear-gradient($text-primary, $text-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.app-navbar .offcanvas .offcanvas-body .navbar-nav li a.nav-link.text-danger:hover {
+    -webkit-text-fill-color: red;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0;
+    /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 300px;
+    z-index: 600;
+    background-color: $background-secondary;
+    overflow-y: auto;
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+.list-group h5 {
+    font-weight: 700;
+    font-size: .95rem;
+    color: $text-light;
+    margin-left: .5rem;
+    margin-top: .5rem;
+    line-height: 1.75rem;
+}
+
+.list-group h5.user {
+    color: #000;
+    font-size: .95rem;
+}
+
+.list-group hr {
+    color: #5d5d5d;
+    width: 95%;
+    transform: translateX(2.5%);
+    margin-bottom: 1.2rem;
+}
+
+.list-group-item {
+    background-color: $background-secondary;
+    color: #000;
+    font-weight: 700;
+    border: 0;
+}
+
+.list-group-item.disabled {
+    background-color: $background-secondary;
+    color: $text-light;
+    font-weight: 700;
+    border: 0;
+}
+
+.list-group-item:hover {
+    background-image: linear-gradient($text-primary, $text-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.list-group-item.text-danger:hover {
+    -webkit-text-fill-color: red;
+}
+
+.list-group-item.active {
+    background-color: transparent;
+    background-image: linear-gradient($text-primary, $text-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.list-group-item.active::after {
+    display: none !important;
+}
+
+// Home
+.home-home {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.home-home span.preview {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $text-light;
+}
+
+.home-home h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: .5rem;
+    margin-bottom: 1.25rem;
+}
+
+.home-home p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+// Subject
+.subjects-list {
+    background-color: $background-secondary;
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+}
+
+.subjects-list h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.subjects-list a {
+    text-decoration: none;
+}
+
+.subjects-list .card {
+    background-color: $background-primary;
+    padding: 2rem 1.5rem;
+    box-shadow: 0px 0px 1px #000;
+}
+
+.subjects-list .card:hover {
+    background-color: #c6c6c6;
+    box-shadow: 0px 0px 5px #000;
+}
+
+.subjects-list .card h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.subjects-list .card p {
+    font-weight: 700;
+    font-size: 1rem;
+    color: $text-light;
+    margin-bottom: 0;
+}
+
+// How it works
+.how-it-works{
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+}
+.how-it-works h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.how-it-works .card {
+    padding: 2rem;
+    background-color: $background-secondary;
+}
+.how-it-works .card span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .75rem;
+    padding: .5rem 1.25rem;
+    background-color: $background-primary;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 1.3rem;
+    box-shadow: 0px 0px 2px #000;
+}
+.how-it-works .card h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: .75rem;
+}
+.how-it-works .card p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $text-light;
+    margin-bottom: 0;
+}
+
+// Become a teacher
+.become-a-teacher{
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+    background-color: $background-secondary;
+}
+.become-a-teacher h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.become-a-teacher .card {
+    padding: 2rem;
+    background-color: $background-primary;
+}
+.become-a-teacher .card h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .25rem;
+}
+.become-a-teacher .card p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $text-light;
+    margin-bottom: .5rem;
+}
+
+// Review
+.reviews{
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+    background-color: $background-primary;
+}
+.reviews h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.reviews .card {
+    padding: 2rem;
+    background-color: $background-secondary;
+}
+.reviews .card p {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+// Footer
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background-color: $background-secondary;
+    box-shadow: 0px 0px 2px #000;
+}
+.footer a{
+    text-decoration: none;
+    display: block;
+}
+.footer p{
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+// General
+.default-header{
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+}
+
+.default-header h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.flag{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.flag-small{
+    width: 20px;
+    height: 20px;
+}
+
+// Subjects
+.teachers-list {
+    background-color: $background-secondary;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.teachers-list h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.teachers-list a {
+    text-decoration: none;
+}
+
+.teachers-list .card {
+    background-color: $background-primary;
+    padding: 2rem 1.5rem;
+    box-shadow: 0px 0px 1px #000;
+}
+
+.teachers-list .card:hover {
+    background-color: #c6c6c6;
+    box-shadow: 0px 0px 5px #000;
+}
+
+.teachers-list .card h5 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: .25rem;
+}
+.teachers-list .card p {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.teachers-list .card .price span {
+    font-size: 1rem;
+    color: $text-light;
+}
+.teachers-list .card .price {
+    font-size: 1.3rem;
+
+}
+
+// Teacher
+.teacher{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.teacher .card {
+    padding: 2rem;
+    background-color: $background-secondary;
+}
+.teacher .card-main{
+    padding: 0;
+}
+
+.teacher .card-main .card-body{
+    padding: 2rem;
+}
+
+.profile-banner{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.teacher .card-main .avatar {
+    margin-top: -10rem;
+}
+.avatar{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.avatar-small{
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.teacher .card-main .social-links a {
+    font-size: 1.1rem;
+}
+
+.teacher .card-main h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+}
+
+.teacher .card-main .title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $text-light;
+    margin-bottom: .5rem;
+}
+.teacher .card-main .location {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.teacher .card hr {
+    margin-top: .5rem;
+    margin-bottom: 1.25rem;
+}
+
+.teacher .card h5 {
+    font-weight: 700;
+}
+
+.teacher .card-secondary {
+    background-color: $background-primary;
+}
+
+.teacher .card .price span {
+    font-size: 1rem;
+    color: $text-light;
+}
+.teacher .card .price {
+    font-size: 1.3rem;
+}
+
+.starsModal .reviews-container{
+    max-height: 450px;
+    overflow-y: auto;
+}
+.starsModal .reviews-container .inside{
+    width: 98%;
+}
+
+.starsModal .stars .star{
+    color: $text-light;
+    font-size: 1.1rem;
+}
+.starsModal .stars .star.hover i{
+    color: $text-primary;
+}
+// Help
+.help{
+    background-color: $background-secondary;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.help .card {
+    background-color: $background-primary;
+    padding: 2rem 1.5rem;
+    box-shadow: 0px 0px 1px #000;
+}
+
+.help .card h5 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: .25rem;
+}
+
+
+// Teacher
+.settings{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.settings h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.settings .card{
+    padding: 2rem;
+    background-color: $background-secondary;
+}
+.settings .card h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+// Auth
+.auth {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.auth .card {
+    background-color: $background-secondary;
+    padding: 1.5rem;
+}
+
+.auth .card.login {
+    max-width: 550px;
+}
+
+.auth .card h3 {
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: .5rem;
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+}
+
+.auth .card hr {
+    color: #5d5d5d;
+    margin: .5rem 0;
+}
+
+.auth .card .form-check-label {
+    font-weight: 700;
+    color: #000;
+}
+
+// Auth panel general
+.container-auth-panel {
+    padding: 0 2.5rem 2rem 21.5rem;
+}
+
+@media (max-width: 991px) {
+    .container-auth-panel {
+        padding: 0rem 2.5rem 2rem 2rem;
+    }
+}
+
+.auth-panel-data {
+    margin-top: 7rem;
+}
+
+.auth-panel-data .title {
+    margin-bottom: 2rem;
+}
+
+.auth-panel-data .title h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.auth-panel-data .title hr {
+    color: $text-primary;
+    width: 10%;
+}
+
+.auth-panel-data .card {
+    background-color: #fff;
+    border: 1px solid $text-light;
+    padding: 2rem;
+}
+.auth-panel-data .card-primary {
+    background-color: $background-primary;
+}
+
+.auth-panel-data .card-secondary {
+    background-color: $background-secondary;
+}
+
+.auth-panel-data .card p {
+    color: #000000;
+}
+
+.auth-panel-data .card .card-h h3 {
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+}
+
+.auth-panel-data .card .card-h hr {
+    color: #5d5d5d;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+// Lists
+.auth-panel-data .a-common-list {
+    text-decoration: none;
+}
+
+.auth-panel-data .a-common-list .common-list:hover {
+    background-color: #dddddd;
+}
+
+.auth-panel-data .common-list {
+    background-color: $background-primary;
+    border: 1px solid $text-light;
+    padding: 1.4rem;
+}
+
+.auth-panel-data .common-list.dark {
+    background-color: $background-secondary;
+}
+
+.auth-panel-data .common-list.dark:hover {
+    background-color: #c7c7c7;
+}
+
+.auth-panel-data .common-list p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.auth-panel-data .common-list .btn {
+    padding: .25rem .5rem;
+    font-size: .7rem;
+}
+
+// Modal
+.defaultModal .modal-content {
+    margin: 6rem auto;
+    padding: .5rem;
+    background-color: $background_primary;
+}
+
+.defaultModal .modal-content .modal-header {
+    padding: 0;
+    padding-bottom: .5rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+    padding-left: 0;
+    border-bottom: 1px solid #b7b7b7;
+}
+
+.defaultModal .modal-content .modal-header h3{
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: .5rem;
+    font-size: 1.05rem;
+    line-height: 1.75rem;
+}
+
+.defaultModal .modal-content .modal-body {
+    text-align: left;
+    font-weight: 700;
+}
+
+.defaultModal .modal-content .modal-body .card {
+    color: #fff;
+    padding: 1rem;
+    background-color: $background-secondary;
+}
+
+.defaultModal .modal-content .modal-body .card span {
+    font-size: .9rem;
+}
+
+// Education
+.education-modal .card h5{
+    color: $text-primary;
+    font-weight: 700;
+    margin-bottom: .25rem;
+}
+
+.education-modal .card p{
+    color: $text-light;
+    margin-bottom: 0;
+}
+
+.education-modal .card hr{
+    color: #000;
+    margin-top: .75rem;
+}
