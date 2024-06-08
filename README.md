@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://teachnow.es" target="_blank"><img src="https://teachnow.es/storage/logos/logo.png" width="150" alt="Teachnow Logo"></a></p>
 
 # Teachnow
 
@@ -56,38 +56,38 @@ Teachnow es una plataforma que facilita la conexión entre profesores particular
 
    ```bash
    git clone https://github.com/tu-usuario/teachnow.git
-   cd teachnow```
+   cd teachnow
 
 2. Instala las dependencias de PHP:
 
    ```bash
-   composer install```
+   composer install
 
 3. Instala las dependencias de JavaScript:
 
     ```bash
-   npm install```
+   npm install
 
 4. Copia el archivo de configuración y ajusta los parámetros necesarios:
 
    ```bash
    cp .env.example .env
-   php artisan key:generate```
+   php artisan key:generate
 
 5. Configura la base de datos en el archivo .env y luego ejecuta las migraciones:
 
    ```bash
-   php artisan migrate```
+   php artisan migrate
 
 6. Compila los assets:
 
    ```bash
-   npm run build```
+   npm run build
 
 7. Inicia el servidor de desarrollo:
 
    ```bash
-   php artisan serve```
+   php artisan serve
 
 ### Uso
 
