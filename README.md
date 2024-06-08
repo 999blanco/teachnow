@@ -17,9 +17,10 @@ Teachnow es una plataforma que facilita la conexión entre profesores particular
 ## Características
 
 - **Búsqueda de Profesores:** Los estudiantes pueden buscar profesores basados en la materia, ubicación y valoraciones de otros usuarios.
-- **Reservas de Clases:** Sistema de reservas para facilitar la programación de clases entre profesores y estudiantes.
+- **Localización dinámica:** Los resultados de las búsquedas se aplican a la localización de los estudiantes.
 - **Valoraciones y Comentarios:** Los estudiantes pueden dejar valoraciones y comentarios sobre las clases recibidas.
 - **Perfil de Usuario:** Gestión de perfiles tanto para estudiantes como para profesores.
+- **Panel de Administración:** Gestión de la página web de forma dinámica.
 
 ## Tecnologías Utilizadas
 
